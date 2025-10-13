@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    @apply bg-background text-textPrimary;
+    background-image:
+      linear-gradient(to right, rgba(0,0,0,0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0,0,0,0.04) 1px, transparent 1px);
+    background-size: 24px 24px;
+    background-position: 0 0, 0 0;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-textPrimary font-semibold tracking-tight;
+  }
+  p {
+    @apply text-textSecondary;
+  }
+  a {
+    @apply text-primary underline-offset-4 hover:underline;
+  }
+  :focus-visible {
+    @apply outline-none ring-2 ring-primary/40 ring-offset-2 ring-offset-background;
+  }
+}
+
+@layer components {
+  .button-primary {
+    @apply bg-primary text-textPrimary px-6 py-3 rounded-md font-semibold border-2 border-black/20 shadow-brutalSm hover:translate-x-0.5 hover:translate-y-0.5 active:translate-x-1 active:translate-y-1 transition disabled:opacity-60 disabled:cursor-not-allowed;
+  }
+  .button-accent {
+    @apply bg-accent text-textPrimary px-6 py-3 rounded-md font-semibold border-2 border-black/20 shadow-brutalSm hover:translate-x-0.5 hover:translate-y-0.5 active:translate-x-1 active:translate-y-1 transition disabled:opacity-60 disabled:cursor-not-allowed;
+  }
+  .input-field {
+    @apply bg-surface border-2 border-black/10 px-4 py-3 rounded-md text-base w-full focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-black;
+  }
+  .card {
+    @apply bg-surface p-4 rounded-card border-2 border-black/10 shadow-card mb-4;
+  }
+  .badge {
+    @apply inline-flex items-center rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary;
+  }
+  .section {
+    @apply container mx-auto p-6;
+  }
+}
+
+@layer utilities {
+  .skeleton {
+    @apply animate-pulse bg-gray-200 rounded-md;
+  }
+  /* Tamanho mínimo de alvos de toque (WCAG 2.5.5) */
+  .touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  /* Mostrar SkipLink ao focar (classe já usada no componente) */
+  .sr-only:focus:not(:focus-visible) {
+    @apply outline-none;
+  }
+  /* Respeitar preferências de redução de movimento */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+  /* Melhor foco em alto contraste */
+  @media (prefers-contrast: more) {
+    :focus-visible {
+      outline: 2px solid currentColor;
+      outline-offset: 2px;
+    }
+  }
+}
+

@@ -1,0 +1,37 @@
+{
+  "doacoes": [],
+  "usuarios": [],
+  "eventos": [
+    {
+      "id": "de33",
+      "titulo": "Mutirão de Arrecadação",
+      "descricao": "Doe 1 kg de alimento e ajude famílias em situação de vulnerabilidade.",
+      "date": "2025-09-21T04:36:25.721Z",
+      "local": "Praça da Bíblia, Ceilândia",
+      "lat": -15.829,
+      "lng": -48.103,
+      "createdAt": 1758342985721
+    },
+    {
+      "id": "d604",
+      "titulo": "Feira Solidária",
+      "descricao": "Ponto de coleta de alimentos não perecíveis.",
+      "date": "2025-09-23T04:36:25.721Z",
+      "local": "Estacionamento do JK Shopping, Ceilândia",
+      "lat": -15.812,
+      "lng": -48.111,
+      "createdAt": 1758342985721
+    },
+    {
+      "id": "2935",
+      "titulo": "Campanha do Agasalho & Alimentos",
+      "descricao": "Coleta conjunta de roupas e alimentos.",
+      "date": "2025-09-25T04:36:25.721Z",
+      "local": "Centro Cultural da Ceilândia",
+      "lat": -15.82,
+      "lng": -48.09,
+      "createdAt": 1758342985722
+    }
+  ],
+  "solicitacoes": []
+}
