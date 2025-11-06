@@ -1,3 +1,16 @@
+/**
+ * Configuração de Rotas da Aplicação
+ * 
+ * Este arquivo define todas as rotas da aplicação usando React Router.
+ * 
+ * Características:
+ * - Code-splitting com lazy loading para melhor performance
+ * - Rotas protegidas para autenticação
+ * - Layout consistente com cabeçalho
+ * - Scroll automático para o topo nas mudanças de rota
+ * - Feedback de carregamento durante o lazy loading
+ */
+
 import { BrowserRouter, Routes as RRDRoutes, Route } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 import Header from '@/components/Header';

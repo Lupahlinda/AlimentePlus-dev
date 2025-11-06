@@ -1,9 +1,22 @@
 import React from 'react';
 
 /**
- * FormField
- * - Garante associação label-control
- * - Exibe mensagem de erro e descrição com ARIA
+ * Componente FormField
+ * 
+ * Um componente reutilizável para campos de formulário que:
+ * - Garante a acessibilidade com associação label-input
+ * - Exibe mensagens de erro de forma acessível
+ * - Suporta descrições de ajuda
+ * - Gerencia estados de erro e validação
+ * - Estilização consistente em todo o aplicativo
+ * 
+ * @param {string} id - ID único para o campo (obrigatório para acessibilidade)
+ * @param {string} label - Rótulo do campo
+ * @param {boolean} [required=false] - Se o campo é obrigatório
+ * @param {string} [error] - Mensagem de erro a ser exibida
+ * @param {string} [description] - Texto de ajuda descritivo
+ * @param {ReactNode} children - Elemento de input/select/textarea
+ * @param {string} [className=''] - Classes CSS adicionais
  */
 const FormField = ({
   id,

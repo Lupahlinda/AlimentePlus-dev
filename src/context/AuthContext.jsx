@@ -1,3 +1,15 @@
+/**
+ * Contexto de Autenticação
+ * 
+ * Fornece um contexto global para gerenciar o estado de autenticação do usuário.
+ * 
+ * Funcionalidades:
+ * - Armazena o estado do usuário autenticado
+ * - Gerencia login/logout
+ * - Persiste a sessão no localStorage
+ * - Fornece funções de autenticação para toda a aplicação
+ */
+
 import React, { createContext, useState, useMemo, useCallback } from 'react';
 
 export const AuthContext = createContext({ user: null, login: () => {}, logout: () => {} });
