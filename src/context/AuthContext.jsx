@@ -18,10 +18,10 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
   const login = useCallback((email, password) => {
-    // Simula um login (mock): poderíamos validar com dados fake se necessário
-    const mockUser = { email, tipo: 'doador' }; // ou 'receptor'
+
+    const mockUser = { email, tipo: 'doador' };
     setUser(mockUser);
-    // Persistência simples opcional
+
     localStorage.setItem('auth_user', JSON.stringify(mockUser));
   }, []);
 
@@ -30,7 +30,6 @@ export const AuthProvider = ({ children }) => {
     localStorage.removeItem('auth_user');
   }, []);
 
-  // Restaurar sessão mockada ao carregar
   React.useEffect(() => {
     const saved = localStorage.getItem('auth_user');
     if (saved) {

@@ -1,24 +1,23 @@
-/* Estilos globais para barras de rolagem personalizadas */
+/* Estilos globais para barras de rolagem */
 * {
-  scrollbar-width: thin;  /* Largura fina para a barra de rolagem */
-  scrollbar-color: rgba(0,0,0,0.2) transparent;  /* Cor do polegar e do trilho */
+  scrollbar-width: thin;  
+  scrollbar-color: rgba(0,0,0,0.2) transparent;
 }
 
 /* Estilização da barra de rolagem para navegadores WebKit (Chrome, Edge, Safari) */
 *::-webkit-scrollbar {
-  width: 8px;    /* Largura da barra de rolagem vertical */
-  height: 8px;   /* Altura da barra de rolagem horizontal */
+  width: 8px;
+  height: 8px;
 }
 
 /* Estilo do polegar da barra de rolagem */
 *::-webkit-scrollbar-thumb {
-  background-color: rgba(0,0,0,0.2);  /* Cor do polegar */
-  border-radius: 8px;                 /* Borda arredondada */
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 8px;
 }
-
 /* Estilo do trilho da barra de rolagem */
 *::-webkit-scrollbar-track {
-  background: transparent;  /* Fundo transparente */
+  background: transparent;
 }
 
 /* Desativa animações quando o usuário prefere movimento reduzido */
@@ -35,7 +34,7 @@
   }
 }
 
-/* Classe para esconder elementos visualmente, mas mantê-los acessíveis para leitores de tela */
+/* Classe para esconder elementos visualmente*/
 .visually-hidden {
   position: absolute !important;
   width: 1px; 
